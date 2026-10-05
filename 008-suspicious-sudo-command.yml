@@ -1,0 +1,8 @@
+id: LDE-008
+title: Suspicious command run with sudo
+level: high
+mitre: [T1548.003, T1059.004]
+description: Privileged commands that download, decode, run from /tmp or touch credential files.
+match:
+  event: sudo_command
+  command|re: '(/tmp/|/dev/shm/|curl |wget |base64 -d|nc |ncat |chmod [+u]?s|/etc/shadow|/etc/sudoers)'

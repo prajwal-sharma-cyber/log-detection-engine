@@ -1,0 +1,11 @@
+id: LDE-004
+title: Username enumeration over SSH
+level: medium
+mitre: [T1110]
+description: Attempts against accounts that do not exist, typical of automated scanners.
+match:
+  event: ssh_invalid_user
+threshold:
+  count: 3
+  within: 10m
+  group_by: [src_ip]

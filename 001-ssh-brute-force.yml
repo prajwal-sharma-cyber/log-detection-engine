@@ -1,0 +1,11 @@
+id: LDE-001
+title: SSH brute force
+level: high
+mitre: [T1110.001]
+description: Five or more failed SSH logins from one source address within five minutes.
+match:
+  event: ssh_failed
+threshold:
+  count: 5
+  within: 5m
+  group_by: [src_ip]

@@ -1,0 +1,13 @@
+id: LDE-003
+title: SSH login succeeded after brute force
+level: critical
+mitre: [T1110, T1078]
+description: A burst of failures followed by a successful login from the same address - the guess probably worked.
+match:
+  event: ssh_failed
+threshold:
+  count: 5
+  within: 10m
+  group_by: [src_ip]
+followed_by:
+  event: ssh_success

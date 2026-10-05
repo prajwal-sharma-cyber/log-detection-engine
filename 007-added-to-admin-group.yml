@@ -1,0 +1,8 @@
+id: LDE-007
+title: User added to an administrative group
+level: high
+mitre: [T1098]
+description: Membership of sudo/wheel/admin gives full control of the host.
+match:
+  event: group_member_added
+  group|in: [sudo, wheel, admin, root]

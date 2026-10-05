@@ -1,0 +1,7 @@
+id: LDE-006
+title: New local user account created
+level: medium
+mitre: [T1136.001]
+description: Attackers create accounts for persistence. Confirm against a change ticket.
+match:
+  event: user_created
